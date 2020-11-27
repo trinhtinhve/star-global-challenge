@@ -3,13 +3,19 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "pm2 start ./bin/www -i max --watch --no-daemon",
-    "stop": "pm2 stop all"
+    "start": "node ./src/app.js",
+    "start-pm2": "pm2 start ./src/app.js --watch --no-daemon -f",
+    "stop-pm2": "pm2 stop all"
   },
   "dependencies": {
+    "config": "^3.3.3",
+    "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "morgan": "~1.9.1",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
     "pm2": "^4.5.0",
+    "sequelize": "^6.3.5",
     "winston": "^3.3.3"
   }
 }
