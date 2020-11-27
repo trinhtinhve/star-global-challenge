@@ -1,0 +1,15 @@
+{
+  "name": "start-global-challenge",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "pm2 start ./bin/www -i max --watch --no-daemon",
+    "stop": "pm2 stop all"
+  },
+  "dependencies": {
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "pm2": "^4.5.0",
+    "winston": "^3.3.3"
+  }
+}
