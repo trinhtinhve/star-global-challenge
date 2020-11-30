@@ -7,7 +7,7 @@ const middleware = require('./middleware');
 const {
   ensureConnected: postgreEnsureConnected,
   sequelize,
-} = require('./common/postgres');
+} = require('./core/star_global_challenge/models');
 
 process.on('uncaughtException', (e) => {
   logger.error(`Exiting due to unhandled exception: ${util.inspect(e)}`);
@@ -84,7 +84,7 @@ function normalizePort(val) {
   return false;
 }
 
-const port = normalizePort(process.env.PORT || '4002');
+const port = normalizePort(process.env.PORT || '4000');
 const server = http.createServer(middleware);
 
 server.on('error', onError);

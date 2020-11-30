@@ -4,10 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node ./src/app.js",
-    "start-pm2": "pm2 start ./src/app.js --watch --no-daemon -f",
-    "stop-pm2": "pm2 stop all"
+    "start_pm2": "pm2 start ./src/app.js --watch --no-daemon -f",
+    "stop_pm2": "pm2 stop all",
+    "create_db": "node ./create_db.js",
+    "migration.gen": "npx sequelize-cli migration:generate --name",
+    "migration.migrate": "npx sequelize-cli db:migrate"
   },
   "dependencies": {
+    "bluebird": "^3.7.2",
     "config": "^3.3.3",
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
@@ -16,6 +20,12 @@
     "pg-hstore": "^2.3.3",
     "pm2": "^4.5.0",
     "sequelize": "^6.3.5",
+    "underscore": "^1.12.0",
     "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "pg-connection-string": "^2.4.0",
+    "pgtools": "^0.3.0",
+    "sequelize-cli": "^6.2.0"
   }
 }

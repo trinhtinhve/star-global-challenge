@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const indexRouter = require('./routes/index');
+const wishlistRoutes = require('./routes/wishlists');
 
-router.use('/wishlist-management/api', [
-  indexRouter
+router.use('/wishlist-service/api', [
+  wishlistRoutes
 ]);
 
 module.exports = router;
