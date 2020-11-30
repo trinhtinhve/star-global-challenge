@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node ./src/app.js",
-    "start_pm2": "pm2 start ./src/app.js --watch --no-daemon -f",
-    "stop_pm2": "pm2 stop all",
+    "start_watch": "pm2 start ./src/app.js --watch --no-daemon -f",
+    "stop_all": "pm2 stop all",
+    "start_cluster": "pm2 start ./src/app.js -i max",
     "create_db": "node ./create_db.js",
     "migration.gen": "npx sequelize-cli migration:generate --name",
-    "migration.migrate": "npx sequelize-cli db:migrate"
+    "migration.migrate": "npx sequelize-cli db:migrate",
+    "test": "NODE_ENV=test jest --runInBand"
   },
   "dependencies": {
     "bluebird": "^3.7.2",
@@ -24,8 +26,10 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "jest": "^26.6.3",
     "pg-connection-string": "^2.4.0",
     "pgtools": "^0.3.0",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "supertest": "^6.0.1"
   }
 }
