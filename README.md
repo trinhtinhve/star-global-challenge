@@ -38,7 +38,7 @@ src:
 - edit POSTGRES_PASSWORD in .env with right password
 
 - edit db information (username, database, host, port) for dev and test env in src/config/database.js
-- create 2 database with name: star_global and star_global_test
+- create 2 databases with name: star_global and star_global_test
 
 - run 'npm install'
 
