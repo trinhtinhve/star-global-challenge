@@ -9,27 +9,27 @@ src:
     * database.js
   - core -> context layer of apps.
     * star_global_challenge -> wishlist app.
-      ** migrations -> migration files created by sequelize cli.
-      ** models
-        *** __mocks__
-        *** index.js -> contain all of models.
-        *** wishlist_details.js
-        *** wishlist_item.js
-        *** wishlist.js
-      ** services
-        *** wishlist.js -> wishlist context.
+      + migrations -> migration files created by sequelize cli.
+      + models
+        * __mocks__
+        * index.js -> contain all of models.
+        * wishlist_details.js
+        * wishlist_item.js
+        + wishlist.js
+      + services
+        * wishlist.js -> wishlist context.
     * star_global_challenge.js -> wishlist app context to communicate between apps.
   - test
     * core
-      ** star_global_challenge
-        *** services
-          **** wishlist.test.js -> wishlist context tests.
-        *** wishlist.test.js -> integration tests for wishlist app.
+      + star_global_challenge
+        * services
+          + wishlist.test.js -> wishlist context tests.
+        * wishlist.test.js -> integration tests for wishlist app.
   - web -> web layer.
     * controllers
-      ** wishlist.js
+      + wishlist.js
     * routes
-      ** wishlist.js
+      + wishlist.js
     * router.js
   - app.js
   - middleware.js
