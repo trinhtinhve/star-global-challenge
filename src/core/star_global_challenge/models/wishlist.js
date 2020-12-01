@@ -12,7 +12,10 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   Wishlist.init({
-    name: DataTypes.STRING
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   }, {
     sequelize,
     modelName: 'Wishlist',

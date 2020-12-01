@@ -1,5 +1,4 @@
 require('dotenv').config();
-const fs = require('fs');
 
 module.exports = {
   development: {
@@ -11,18 +10,25 @@ module.exports = {
     dialect: 'postgres',
     dialectOptions: {
       bigNumberStrings: true
+    },
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000
     }
   },
   test: {
-    username: process.env.CI_DB_USERNAME,
-    password: process.env.CI_DB_PASSWORD,
-    database: process.env.CI_DB_NAME,
+    username: 'postgres',
+    password: process.env.POSTGRES_PASSWORD,
+    database: 'star_global_test',
     host: '127.0.0.1',
     port: 5432,
     dialect: 'postgres',
     dialectOptions: {
       bigNumberStrings: true
-    }
+    },
+    logging: false
   },
   production: {
     username: process.env.PROD_DB_USERNAME,

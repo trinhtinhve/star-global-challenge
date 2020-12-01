@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const http = require('http');
 const util = require('util');
 const logger = require('./common/logger');
