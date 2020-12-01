@@ -11,7 +11,7 @@ src:
     * star_global_challenge -> wishlist app.
       + migrations -> migration files created by sequelize cli.
       + models
-        * __mocks__
+        * mocks
         * index.js -> contain all of models.
         * wishlist_details.js
         * wishlist_item.js
