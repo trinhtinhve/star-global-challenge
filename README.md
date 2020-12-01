@@ -1,10 +1,10 @@
 # start-global-challenge
 ## Source code structure
 src:
-  common -> contain common modules to support for the project.
-    error.code.js -> define error codes
-    error.js  -> error handler
-    logger.js
+  - common -> contain common modules to support for the project.
+    * error.code.js -> define error codes
+    * error.js  -> error handler
+    * logger.js
   config
     database.js
   core -> context layer of apps.
