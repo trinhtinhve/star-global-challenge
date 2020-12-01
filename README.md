@@ -47,3 +47,6 @@ src:
 - start app: 'npm start'
 
 - test app: 'npm run test'
+
+## Postman
+- import star-global.postman_collection.json into your postman app to have api call examples

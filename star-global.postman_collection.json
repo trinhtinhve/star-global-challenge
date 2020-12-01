@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "286192da-0f96-47ef-a82e-c82517b1ce73",
+		"name": "star-global",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "wishlists",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"wishlist2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/wishlist-service/api/v1/wishlists",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"wishlist-service",
+						"api",
+						"v1",
+						"wishlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wishlists_items",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n        {\n            \"value\": \"a\"\n        },\n        {\n            \"value\": \"b\"\n        },\n        {\n            \"value\": \"c\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/wishlist-service/api/v1/wishlists/1/items",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"wishlist-service",
+						"api",
+						"v1",
+						"wishlists",
+						"1",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wishlists",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"wishlist111222\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/wishlist-service/api/v1/wishlists/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"wishlist-service",
+						"api",
+						"v1",
+						"wishlists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wishlists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/wishlist-service/api/v1/wishlists",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"wishlist-service",
+						"api",
+						"v1",
+						"wishlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wishlists_details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/wishlist-service/api//v1/wishlists/1/details",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"wishlist-service",
+						"api",
+						"",
+						"v1",
+						"wishlists",
+						"1",
+						"details"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
