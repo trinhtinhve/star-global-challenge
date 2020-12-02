@@ -40,7 +40,7 @@ src:
 - edit POSTGRES_PASSWORD in .env with right password
 
 - edit db information (username, database, host, port) for dev and test env in src/config/database.js
-- create 2 databases with name: star_global and star_global_test. Open package.json and update host, username, port for 2 commands 'create_db' and 'create_db_test' then run 'npm run create_db' and 'npm run create_db_test', then input your password to connect to your db
+- create 2 databases with name: star_global and star_global_test. Open package.json and update host, username, port for 2 commands 'create_db' and 'create_db_test' then run 'npm run create_db' and 'npm run create_db_test', it will automatically prompt for a password to connect to your db
 
 - run 'npm run migration.migrate'
 
